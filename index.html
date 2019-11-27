@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>放大镜</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .clear::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .box{
+      margin: 50px;
+    }
+    .box>div{
+      float: left;
+      border: 1px solid;
+      background-repeat: no-repeat;
+      background-clip: padding-box;
+      
+    }
+    .box div.small{
+      position: relative;
+      margin-right: 50px;
+      background-size: 100% 100%;
+    }
+    .box div.big{
+      display: none;
+    }
+    .box .move{
+      background-color: gold;
+      opacity: 0.5;
+      display: none;
+      position: absolute;
+      cursor: move;
+
+    }
+  </style>
+</head>
+
+<body>
+<div class="box clear">
+  <div class="small">
+    <div class="move"></div>
+  </div>
+  <div class="big"></div>
+</div>
+
+<script src="./magnifier.js"></script>
+</body>
+
+</html>
